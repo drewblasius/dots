@@ -1,3 +1,15 @@
+
+[color "branch"]
+	remote = yellow
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = true
+	pager = true
+	commit = auto
 [alias]
 	br = branch
 	ci = commit
@@ -9,3 +21,6 @@
 	pullom = pull origin master
 	pullo = "!f() { git pull origin $1;}; f"
 	pusho = "!f() { git push origin $1;}; f"
+
+[credential]
+	helper = cache --timeout 3600
