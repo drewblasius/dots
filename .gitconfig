@@ -1,0 +1,11 @@
+[alias]
+	br = branch
+	ci = commit
+	co = checkout
+	cob = checkout -b
+	df = diff
+	st = status
+	pushom = push origin master
+	pullom = pull origin master
+	pullo = "!f() { git pull origin $1;}; f"
+	pusho = "!f() { git push origin $1;}; f"
