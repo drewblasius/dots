@@ -1,4 +1,5 @@
 set nu
+set noswapfile
 colorscheme elflord
 syntax on
 
@@ -19,3 +20,5 @@ au BufNewFile,BufRead *.R  set shiftwidth=2
 au BufNewFile,BufRead *.R  set expandtab 
 au BufNewFile,BufRead *.R  set autoindent 
 au BufNewFile,BufRead *.R  set fileformat=unix 
+
+
