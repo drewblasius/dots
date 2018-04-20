@@ -21,4 +21,11 @@ au BufNewFile,BufRead *.R  set expandtab
 au BufNewFile,BufRead *.R  set autoindent 
 au BufNewFile,BufRead *.R  set fileformat=unix 
 
+"html
+au BufNewFile,BufRead *.html  set tabstop=2 
+au BufNewFile,BufRead *.html  set softtabstop=2 
+au BufNewFile,BufRead *.html  set shiftwidth=2 
+au BufNewFile,BufRead *.html  set expandtab 
+au BufNewFile,BufRead *.html  set autoindent 
+au BufNewFile,BufRead *.html  set fileformat=unix 
 
