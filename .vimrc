@@ -29,3 +29,10 @@ au BufNewFile,BufRead *.html  set expandtab
 au BufNewFile,BufRead *.html  set autoindent 
 au BufNewFile,BufRead *.html  set fileformat=unix 
 
+"html
+au BufNewFile,BufRead *.js  set tabstop=2 
+au BufNewFile,BufRead *.js  set softtabstop=2 
+au BufNewFile,BufRead *.js  set shiftwidth=2 
+au BufNewFile,BufRead *.js  set expandtab 
+au BufNewFile,BufRead *.js  set autoindent 
+au BufNewFile,BufRead *.js  set fileformat=unix 
