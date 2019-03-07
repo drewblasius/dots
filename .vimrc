@@ -1,7 +1,42 @@
 set nu
 set noswapfile
+set laststatus=2
+set noshowmode
 colorscheme elflord
 syntax on
+
+call plug#begin('~/.vim/plugged')
+Plug 'w0rp/ale'
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+Plug 'itchyny/lightline.vim'
+
+Plug 'nathanaelkane/vim-indent-guides'
+
+Plug 'scrooloose/nerdtree'
+call plug#end()
+
+" lightline
+if !has('gui_running')
+  set t_Co=256
+endif
+
+" vim-indent-guides
+let g:indent_guides_enable_on_vim_startup = 1
+
+" NerdTree
+map <C-o> :NERDTreeToggle<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" ALE
+let g:ale_sign_error = ':('
+let g:ale_sign_warning = ':|'
+
+
+
 
 "Python
 au BufNewFile,BufRead *.py  set tabstop=4 

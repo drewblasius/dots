@@ -1,0 +1,11 @@
+name: xoxo 
+channels:
+  - conda-forge
+  - ostrokach-forge
+dependencies: 
+  - black
+  - flake8
+  - vim
+  - tmux=2.7
+  - ripgrep
+  - r-lintr
