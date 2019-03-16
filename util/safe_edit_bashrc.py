@@ -17,6 +17,8 @@ ext_bashrc="""
 export PATH="$HOME/.local/bin:$PATH"
 alias vi='vim'
 alias dstat='docker ps --format={{.Names}} | xargs docker stats'
+export TERM=xterm-256color
+alias cha="chmod a+rwX -R ."
 """
 
 new_lines = []

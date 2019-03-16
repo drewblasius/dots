@@ -25,12 +25,24 @@ conda env update --quiet -f environment.yml -n root
 # conda  --file environment.yml
 # conda env update --file environment.yml && source activate xoxo
 
+# Tmux plugins
+if [ ! -d ~/.tmux/plugins/tpm ]; then
+  git clone --depth 1 --branch "v3.0.0" https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
+
+mkdir -p ./backups
+
+# .tmux.conf
+if [ -f $HOME/.tmux.conf ]; then
+  cp $HOME/.tmux.conf ./backups/
+fi
+cp ./.tmux.conf ~/.tmux.conf
+
 echo "Adding plug"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # .vimrc
-mkdir -p ./backups
 if [ -f $HOME/.vimrc ]; then
   cp $HOME/.vimrc ./backups/
 fi
