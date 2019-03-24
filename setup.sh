@@ -38,6 +38,10 @@ if [ -f $HOME/.tmux.conf ]; then
 fi
 cp ./.tmux.conf ~/.tmux.conf
 
+# Need to run this to manually install the plugins, too
+~/.tmux/plugins/tpm/bin/install_plugins
+
+
 echo "Adding plug"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
