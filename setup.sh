@@ -39,8 +39,10 @@ fi
 cp ./.tmux.conf ~/.tmux.conf
 
 # Need to run this to manually install the plugins, too
-~/.tmux/plugins/tpm/bin/install_plugins
-
+tmux start-server && \
+  tmux new-session -t install-plugins -d && \
+  ~/.tmux/plugins/tpm/bin/install_plugins && \
+  tmux kill-session -t install-plugins
 
 echo "Adding plug"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
