@@ -32,6 +32,7 @@ fi
 
 mkdir -p ./backups
 
+###
 # .tmux.conf
 if [ -f $HOME/.tmux.conf ]; then
   cp $HOME/.tmux.conf ./backups/
@@ -48,6 +49,7 @@ echo "Adding plug"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+###
 # .vimrc
 if [ -f $HOME/.vimrc ]; then
   cp $HOME/.vimrc ./backups/
@@ -58,6 +60,7 @@ cp ./.vimrc ~/.vimrc
 echo "Installing vim plugins"
 vim +PlugInstall +qall
 
+###
 # Bashrc
 if [ -f $HOME/.bashrc ]; then
   cp $HOME/.bashrc ./backups/
@@ -65,3 +68,11 @@ fi
 
 echo "PATH=${CONDA_DIR}/bin:\$PATH" >> ~/.bashrc
 ${CONDA_DIR}/bin/python ./util/safe_edit_bashrc.py ~/.bashrc 
+
+###
+# Gitconfig
+if [ -f $HOME/.gitconfig ]; then
+  cp $HOME/.gitconfig ./backups/
+fi
+cp ./.gitconfig ~/.gitconfig
+
