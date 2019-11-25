@@ -76,3 +76,11 @@ if [ -f $HOME/.gitconfig ]; then
 fi
 cp ./.gitconfig ~/.gitconfig
 
+
+### 
+# Auto-complete
+if [ -f $HOME/.bash_completion ]; then
+  cp $HOME/.bash_completion ./backups/
+fi
+cat completion/* > $HOME/.bash_completion
+
