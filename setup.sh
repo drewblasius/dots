@@ -25,6 +25,9 @@ conda env update --quiet -f environment.yml -n root
 # conda  --file environment.yml
 # conda env update --file environment.yml && source activate xoxo
 
+# https://github.com/tmux-plugins/tpm/issues/105
+export TMUX_PLUGIN_MANAGER_PATH='$HOME/.tmux/plugins/'
+
 # Tmux plugins
 if [ ! -d ~/.tmux/plugins/tpm ]; then
   git clone --depth 1 --branch "v3.0.0" https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
